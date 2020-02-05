@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  wordpress:
+    image: wordpress
+    restart: on-failure
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: 'root'
+  db:
+    image: mysql:5.5
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: word_press_db
+      MYSQL_ROOT_PASSWORD: 'root'

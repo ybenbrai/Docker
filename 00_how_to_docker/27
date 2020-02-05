@@ -1,0 +1,1 @@
+docker service logs -f $(docker service ps -q engineering-bay |  head  -n1)

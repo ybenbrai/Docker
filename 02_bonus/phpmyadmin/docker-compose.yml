@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+    db:
+        image: mysql:5.5
+        restart: on-failure
+        environment:
+            MYSQL_DATABASE: 'database'
+            MYSQL_USER: 'corrector'
+            MYSQL_PASSWORD: corrector
+            MYSQL_ROOT_PASSWORD: khimya
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: on-failure
+        ports:
+        - 1993:80

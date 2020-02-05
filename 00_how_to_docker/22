@@ -1,0 +1,1 @@
+docker swarm join --token $(docker-machine ssh Char docker swarm join-token -q manager) $(docker-machine ip Char):2377

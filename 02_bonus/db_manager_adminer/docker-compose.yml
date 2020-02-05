@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+    db:
+        image: mysql:5.5
+        restart: always
+        environment:
+            MYSQL_DATABASE: 'testing_db'
+            MYSQL_USER: 'corrector'
+            MYSQL_PASSWORD: corrector
+            MYSQL_ROOT_PASSWORD: khimya
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+        - 1993:8080

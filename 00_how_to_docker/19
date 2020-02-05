@@ -1,0 +1,1 @@
+docker container run --name Abathur -v ~/python-test/:/root -p 3000:3000  -it python:2-slim bash -c "pip install flask && cd /root && python tata.py"
